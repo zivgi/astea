@@ -1,5 +1,20 @@
 <div>
   <span class="content">{{title}}</span>
   <!-- <song-list></song-list> -->
-  <song-container></song-container>
+  <!-- <song-container *ngIf="!isLoading"></song-container> -->
+
+  <user-container-with-model *ngIf="!isLoading"></user-container-with-model>
+
+  <div *ngIf="isLoading">
+    Loading please wait
+  </div>
+
+  <ng-container *ngIf="!isLoading" class="aaaa">
+    <ng-container *ngFor="let user of users">
+      <div>
+        I am a user {{user}}
+      </div> 
+    </ng-container>
+  </ng-container>
+
 </div>

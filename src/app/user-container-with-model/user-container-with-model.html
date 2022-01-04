@@ -1,0 +1,24 @@
+<div class="user-container">
+    <img src="{{currentUser.info.avatar}}" width="50" height="50">
+
+    <div>
+        name:{{currentUser.username}}
+    </div>
+    <div>
+        email:{{currentUser.email}}
+    </div>
+    <div>
+        firstName:{{currentUser.info.firstName}}
+    </div>
+    <div>
+        lastName:{{currentUser.info.lastName}}
+    </div>
+
+
+    <button (click)="onSave(userNameInput.value, userEmailInput.value)" >Save</button>
+    
+    <input #userNameInput placeholder="user name" [value]='currentUser.username'>
+    <input #userEmailInput placeholder="user email" [value]='currentUser.email'>
+
+</div>
+    

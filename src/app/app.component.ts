@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IUserInfo } from './models/userModel';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'asteDay02';
+
+  public isLoading = true;
+
+  public users: string[] = [];
+
+  constructor() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
+    
+    this.users.push("Ziv");
+    this.users.push("Moshe");
+  }
 } 
