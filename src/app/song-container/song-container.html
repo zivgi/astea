@@ -1,0 +1,26 @@
+<div class="song-container">
+    <div>
+        name:{{songName}}
+    </div>
+    <div>
+        singer:{{songSinger}}
+    </div>
+    <div [innerText]="songSinger" [style]="style">
+        
+    </div>
+
+    <div [innerText]="songSinger" 
+        [style.background]="backgroundStyle"
+        [style.color]="colorStyle"
+        >
+        
+    </div>
+
+    <button (click)="onSave(songNameInput.value)" >Save</button>
+    
+    <input #songNameInput placeholder="song name" 
+    (change)="songNameInputChange(songNameInput)">
+    <div>You typed {{songNameInput.value}}</div>
+
+</div>
+    
