@@ -3,30 +3,35 @@
   <!-- <song-list></song-list> -->
   <!-- <song-container *ngIf="!isLoading"></song-container> -->
 
-  <div appDirectiveExample="green" fgColor="white" >
+  <div style="background-color: red; width: 100; position: absolute;" 
+      appDragAndDrop>
+    Box
+  </div>
+  <!-- <div appDirectiveExample="green" fgColor="white" >
     Directive Example Div
   </div>
   <span appDirectiveExample fgColor="red">
     Directive Example Span
-  </span>
+  </span> -->
 
-  <user-container-with-model
+  <!-- <user-container-with-model
   
-  ></user-container-with-model>
+  ></user-container-with-model> -->
 
 
-  <user-container-with-model *ngIf="!isLoading"></user-container-with-model>
+  <!-- <user-container-with-model *ngIf="!isLoading"></user-container-with-model>
 
   <div *ngIf="isLoading">
     Loading please wait
-  </div>
+  </div> -->
 
-  <ng-container *ngIf="!isLoading" class="aaaa">
+  <!-- <ng-container *ngIf="!isLoading" class="aaaa">
     <ng-container *ngFor="let user of users">
       <div>
         I am a user {{user}}
       </div> 
     </ng-container>
-  </ng-container>
+  </ng-container> -->
 
+  <!-- <user-list></user-list> -->
 </div>
