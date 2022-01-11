@@ -11,6 +11,7 @@ import { UserListComponent } from './userList/user-list.component';
 import { UserEditor } from './userList/user-editor';
 import { UserItem } from './userList/user-item';
 import { DragAndDropDirective } from './dragAndDrop/drag-and-drop.directive';
+import { UserModuleModule } from './userList/user.module';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,10 @@ import { DragAndDropDirective } from './dragAndDrop/drag-and-drop.directive';
     SongContainer,
     UserContainerWithModel,
     DirectiveExample1Directive,
-
-    UserListComponent,
-    UserEditor,
-    UserItem,
     DragAndDropDirective
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, UserModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
