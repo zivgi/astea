@@ -1,0 +1,5 @@
+<div>
+    <song-search (searchTermChanged)="searchTermChanged($event)"></song-search>
+    {{searchTerm}}
+    <song-list [searchFilter]="searchTerm"></song-list>
+</div>
