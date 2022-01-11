@@ -3,6 +3,18 @@
   <!-- <song-list></song-list> -->
   <!-- <song-container *ngIf="!isLoading"></song-container> -->
 
+  <div appDirectiveExample="green" fgColor="white" >
+    Directive Example Div
+  </div>
+  <span appDirectiveExample fgColor="red">
+    Directive Example Span
+  </span>
+
+  <user-container-with-model
+  
+  ></user-container-with-model>
+
+
   <user-container-with-model *ngIf="!isLoading"></user-container-with-model>
 
   <div *ngIf="isLoading">
