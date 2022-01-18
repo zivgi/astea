@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -15,7 +17,10 @@ import { UserModuleModule } from './userList/user.module';
 import { SongsWithSearch } from './song-list-with-fetch/songs-with-search';
 import { SongSearchComponent } from './song-list-with-fetch/song-search';
 import { UserListUsingServiceComponent } from './user-list-using-service/user-list-using-service.component';
-import { UsersServiceService } from './service/users-service.service';
+import { NoopInterceptor, UsersServiceService } from './service/users-service.service';
+import { TimingInterceptor } from './service/timingInterceptor';
+import { AppRoutingModule } from './app-routing.module';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 let config = {
   port: 3000
@@ -34,12 +39,19 @@ let SERVER_USR = "Local Host"
     SongsWithSearch,
     SongSearchComponent,
     SongListComponent,
-    UserListUsingServiceComponent
+    UserListUsingServiceComponent,
+    UserDetailsComponent
   ],
   imports: [
-    BrowserModule, FormsModule, UserModuleModule
+    BrowserModule, FormsModule, UserModuleModule, HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: NoopInterceptor, multi: true },
+    {provide: HTTP_INTERCEPTORS, useClass: TimingInterceptor, multi: true }
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+providers:[]

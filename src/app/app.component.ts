@@ -17,8 +17,5 @@ export class AppComponent {
     setTimeout(() => {
       this.isLoading = false;
     }, 1000);
-    
-    this.users.push("Ziv");
-    this.users.push("Moshe");
   }
 } 
