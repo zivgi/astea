@@ -14,6 +14,14 @@ import { DragAndDropDirective } from './dragAndDrop/drag-and-drop.directive';
 import { UserModuleModule } from './userList/user.module';
 import { SongsWithSearch } from './song-list-with-fetch/songs-with-search';
 import { SongSearchComponent } from './song-list-with-fetch/song-search';
+import { UserListUsingServiceComponent } from './user-list-using-service/user-list-using-service.component';
+import { UsersServiceService } from './service/users-service.service';
+
+let config = {
+  port: 3000
+}
+
+let SERVER_USR = "Local Host"
 
 @NgModule({
   declarations: [
@@ -25,7 +33,8 @@ import { SongSearchComponent } from './song-list-with-fetch/song-search';
 
     SongsWithSearch,
     SongSearchComponent,
-    SongListComponent
+    SongListComponent,
+    UserListUsingServiceComponent
   ],
   imports: [
     BrowserModule, FormsModule, UserModuleModule
